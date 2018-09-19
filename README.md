@@ -1,5 +1,4 @@
 # FUSE D7 File System
-======================
 
 D7FS implements the FUSE driver for a custom file system. This was developed for the class Sistemas Operativos II in Unitec SPS, Q3 2018. 
 
@@ -40,5 +39,5 @@ struct Entry{ 					//total size = 288
 
 This marks one of the limitations of this filesystem, it can only have (BLOCK_SIZE/ENTRY_SIZE) entries per directory, including root.
 
-If the entry is a directory its ```index_block``` points to the block which contains its entries. If it is a file ```index_block``` points to a doubly indirect block, which point to indirect blocks, which point to actual data blocks.
+If the entry is a directory its ```index_block``` points to the block which contains its entries. If it is a file ```index_block``` points to a doubly indirect block, which contains pointers to indirect blocks, which contain pointers to actual data blocks.
 
