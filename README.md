@@ -27,11 +27,11 @@ struct Directory{
     struct Entry entries[MAX_DIRECTORY_ENTRIES];
 };
 
-struct Entry{			//total size = 288
+struct Entry{				//total size = 288
     int index_block;			//4
-    char name[MAX_FILE_NAME];			//256
-    long size;			//8
-    int is_dir;			//4
+    char name[MAX_FILE_NAME];		//256
+    long size;				//8
+    int is_dir;				//4
     long created_at;			//8
     long last_modified;			//8
 };
